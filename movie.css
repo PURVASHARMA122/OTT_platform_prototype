@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Raleway:wght@100&display=swap');
+
+*{
+    margin:0;
+}
+body{
+    font-family: 'Nerko One', cursive;
+    height:100%;
+}
+.navbar{
+ max-width:100vw;
+    height:50px;
+    background-color: black;
+    padding:0 50px;
+    
+    
+}
+
+.navbar-container{
+    display:flex;
+    align-items:center;
+   /* background-color: blanchedalmond;*/
+    height:100%;
+    color:white;
+}
+.logo-container{
+    flex:1;
+    /*background-color: aqua;  /*flex: 1; is the shorthand for flex: 1 1 0;, which on its own is the shorthand for: flex-shrink: 1; flex-grow: 1; flex-basis: 0;*/
+}
+.logo{
+    font-family: 'Nerko One', cursive;
+    color:rgb(247, 103, 26)
+}
+.menu-container{
+    
+    flex:6;
+    
+  /*  background-color: brown;*/
+}
+.menu-list{
+    list-style: none;
+    display: flex;
+}
+.menu-list-item{
+    margin-right: 30px;
+    font-size: 24px;
+}
+.profile-container{
+    flex:2;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+   /* background-color: blueviolet;*/
+}
+.profile-picture{
+    width:34px;
+    height:36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-text-container{
+    margin:0 20px;
+}
+.toggle{
+    width:40px;
+    height:20px;
+    border-radius:30px;
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    
+}
+.toggle-icon{
+    color:rgba(250, 243, 47, 0.979);
+  /*  border:2px solid red;*/
+
+    
+}
+.toggle-ball{
+    width:18px;
+    height:18px;
+    background-color: black;
+    position: absolute;
+    right:1px;
+    border-radius: 50%;
+}
+
+.sidebar{
+background-color: black;
+width:50px;
+height:100vh;
+position: fixed;
+top:0;
+display:flex;
+flex-direction: column;
+padding-top: 60px;
+align-items: center;
+
+
+}
+.left-menu-icon{
+    color:white;
+    font-size: 20px;
+    margin-bottom:30px;
+    padding-bottom: 30px;
+}
+.container{
+    background-color: rgb(38, 40, 36);
+   min-height:93.29581vh;
+    color:white;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(9,10,8,1) 21.3%, rgba(8,8,7,0.89) 66.2%, rgba(6,6,6,0.87) 73.9%, rgba(16,14,14,1) 100.3% );
+} 
+.content-container{
+    margin-left: 50px;
+    
+    
+}
+.featured-content{
+    height:50vh;
+    padding:40px;
+    
+}
+.featured-title{
+    width:350px;
+}
+.featured-desc{
+    /*border:2px solid yellow;*/
+    width:500px;
+    color:bisque;
+   margin:30px 0;
+}
+.featured-desc1{
+    color:rgb(34, 34, 2);
+    font-size:60px ;
+    margin-top:0;
+    
+}
+.featured-button{
+    background-color: rgb(233, 68, 8);
+    color:aliceblue;
+    padding:10px 20px;
+    border-radius: 10%;
+    border:none;
+    outline:none;
+}
+.mli-img{
+    width:200px;
+    height:300px;
+    transition: all 1s ease-in-out;
+    object-fit: cover;
+    border-radius:20px;
+}
+.movie-list{
+    display:flex;
+    height: 300px;
+    align-items: center;
+    transform:translateX(0);
+    transition: all 1s ease-in-out;
+    
+}
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+    /*ackground-color: blue;*/
+    
+}
+
+.movie-list-item:hover .mli-img{
+    transform:scale(1.2);
+    margin:0 30px;
+    opacity: 0.5;
+}
+.movie-list-item:hover .mli-desc,
+.movie-list-item:hover .mli-btn{
+    opacity:1;
+}
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+   /* background-color: burlywood;*/
+
+}
+.movie-list-title{
+    padding: 20px 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.movie-list-container{
+ padding:20px;
+}
+/*.movie-list-item-title{
+    background-color: rgb(45, 46, 47);
+    padding:0 10px;
+    font-size:32px;
+
+    
+}*/
+.mli-desc{
+    background-color:rgba(57, 57, 76, 0.59) ;
+    padding:10px;
+    margin-bottom:10px;
+    font-size: 13px;;
+    font-family: 'Raleway', sans-serif;
+    position:absolute;
+    top:20%;
+    left:20px;
+    width:150px;
+   opacity:0;
+   transition: all 1s ease-in-out;
+
+}
+.mli-btn{
+    background-color: rgb(250, 63, 25);
+    color:aliceblue;
+    outline: none;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    left:18px;
+    top:65%;
+    padding:5px 10px;
+    opacity:0;
+    transition: all 1s ease-in-out;
+    margin-top:10px;
+
+}
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top:30%;
+    right: 0;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+container.active{
+    background-color: white;
+    color:black;
+    min-height:93.29581vh;
+}
+.movie-list-title.active{
+    color:black;
+}
+.navbar-container.active{
+    color:black;
+    background-color: white;
+}
+.sidebar.active{
+    background-color: white;
+    
+
+}
+.left-menu-icon.active{
+    color:black;
+}
+.toggle.active{
+    background-color: black;
+}
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+.movie-list-wrapper.active{
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+
+}
+.movie-list-container.active{
+    background-color: white;
+}
+.arrow.active{
+    color:rgb(20, 18, 18);
+}
+
